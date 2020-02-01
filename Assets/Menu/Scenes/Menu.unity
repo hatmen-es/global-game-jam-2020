@@ -452,6 +452,26 @@ PrefabInstance:
       propertyPath: switchScene
       value: 
       objectReference: {fileID: 300499980}
+    - target: {fileID: 114754865640368622, guid: ed022c6eaaa372f498c83d69665e2adc,
+        type: 3}
+      propertyPath: scene
+      value: Main
+      objectReference: {fileID: 0}
+    - target: {fileID: 114754865640368622, guid: ed022c6eaaa372f498c83d69665e2adc,
+        type: 3}
+      propertyPath: loadToColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114754865640368622, guid: ed022c6eaaa372f498c83d69665e2adc,
+        type: 3}
+      propertyPath: loadToColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114754865640368622, guid: ed022c6eaaa372f498c83d69665e2adc,
+        type: 3}
+      propertyPath: loadToColor.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7595851866180707982, guid: ed022c6eaaa372f498c83d69665e2adc,
         type: 3}
       propertyPath: m_Layer
