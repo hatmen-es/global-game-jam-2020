@@ -3,9 +3,8 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class gameControllerScript : MonoBehaviour
+public class GameController : Singleton<GameController>
 {
-    public static gameControllerScript instance;
     public Text timerText;
     public GameObject gameOvertext;
 
@@ -18,10 +17,6 @@ public class gameControllerScript : MonoBehaviour
     void Start()
     {
         timerText.text = timer.ToString();
-        if (instance == null)
-            instance = this;
-        else if(instance != this)
-            Destroy (gameObject);
     }
 
     void Update()
