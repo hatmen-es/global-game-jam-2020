@@ -3,8 +3,10 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameController : Singleton<GameController>
+public class GameController : MonoBehaviour
 {
+    public static GameController Instance;
+
     public Text timerText;
     public GameObject gameOvertext;
 
@@ -13,6 +15,18 @@ public class GameController : Singleton<GameController>
     public bool gameOver = false;
     public float scrollSpeed = -1.5f;
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+
+    }
 
     void Start()
     {
