@@ -13,7 +13,7 @@ public class ScrollManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        initialPos = camera.transform.position;
+        initialPos = grid.transform.position;
     }
 
     // Update is called once per frame
@@ -22,9 +22,8 @@ public class ScrollManager : MonoBehaviour
         Vector3 bottom = camera.ScreenToWorldPoint(Vector2.zero);
         Vector3 cell = grid.WorldToCell(bottom);
         int row = Mathf.RoundToInt(cell.y);
-        Debug.Log(row);
         if (row == threshold) {
-            camera.transform.position = initialPos;
+            grid.transform.position = initialPos;
             mapGenerator.generatNextMap(threshold);
         }
     }
