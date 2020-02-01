@@ -62,7 +62,10 @@ public class PlayerController : MonoBehaviour
         switch(collider.gameObject.tag) {
             case "Fixable":
                 int element = mapGenerator.mapElementInWorldPos(transform.position);
-                mapGenerator.removeFixableAtPosition(transform.position);
+                if (element != 0) {
+                    GameController.Instance.IncrementTimer();
+                    mapGenerator.removeFixableAtPosition(transform.position);
+                }
             break;
 
             default: break;
