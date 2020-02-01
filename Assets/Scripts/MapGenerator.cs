@@ -25,7 +25,7 @@ public class MapGenerator : MonoBehaviour
     }
     public int[,] Generate(int height, int safeInterval)
     {
-        int nElements = 3;
+        int nElements = 17;
         int[,] map = new int[width, height];
         int rightIndex = width - 1;
 
@@ -92,5 +92,10 @@ public class MapGenerator : MonoBehaviour
             }
         }
         RenderMap(map);
+    }
+
+    public int mapElementInWorldPos(Vector3 pos) {
+        Vector3Int matrixPos = tilemap.WorldToCell(pos);
+        return map[matrixPos.x, matrixPos.y];
     }
 }
