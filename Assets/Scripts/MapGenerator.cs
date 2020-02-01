@@ -8,8 +8,10 @@ public class MapGenerator : MonoBehaviour
 {
     public Tilemap tilemap;
     public Tile baseTile;
+    public Tile leftTile;
+    public Tile rightTile;
     void Start() { 
-        int [,] map = Generate(8, 200, 1);
+        int [,] map = Generate(10, 200, 1);
         RenderMap(map);
     }
     public static int[,] Generate(int width, int height, int nElements)
@@ -36,14 +38,21 @@ public class MapGenerator : MonoBehaviour
         //Clear the map (ensures we dont overlap)
         tilemap.ClearAllTiles(); 
         //Loop through the width of the map
-        for (int x = 0; x < map.GetUpperBound(0) ; x++) 
+        int width = map.GetUpperBound(0);
+        int height = map.GetUpperBound(1);
+        int rightIndex = width - 1;
+        for (int x = 0; x < width ; x++) 
         {
             //Loop through the height of the map
-            for (int y = 0; y < map.GetUpperBound(1); y++) 
+            for (int y = 0; y < height; y++) 
             {
                 // 1 = tile, 0 = no tile
-                if (map[x, y] == 1) 
+                if (x == 0) 
                 {
+                    tilemap.SetTile(new Vector3Int(x, y, 0), leftTile); 
+                } else if (x == rightIndex) {
+                    tilemap.SetTile(new Vector3Int(x, y, 0), rightTile); 
+                } else {
                     tilemap.SetTile(new Vector3Int(x, y, 0), baseTile); 
                 }
             }
