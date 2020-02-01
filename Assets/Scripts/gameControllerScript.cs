@@ -9,7 +9,7 @@ public class gameControllerScript : MonoBehaviour
     public Text timerText;
     public GameObject gameOvertext;
 
-    private float timer = 8.0f;
+    private float timer = 5.0f;
     private int visibleTimer;
     public bool gameOver = false;
     public float scrollSpeed = -1.5f;
@@ -26,7 +26,7 @@ public class gameControllerScript : MonoBehaviour
 
     void Update()
     {
-        if (gameOver && Input.GetMouseButtonDown(0))
+        if (gameOver && Input.GetKeyDown("space"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
