@@ -41,6 +41,8 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         //Should ignore borders
+        var tilebase = collision.gameObject.name;
+        Debug.Log(tilebase);
         switch(collision.gameObject.tag) {
             case "Border":
                 return;
