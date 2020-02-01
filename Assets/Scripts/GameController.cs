@@ -3,9 +3,10 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class gameControllerScript : MonoBehaviour
+public class GameController : MonoBehaviour
 {
-    public static gameControllerScript instance;
+    public static GameController Instance;
+
     public Text timerText;
     public GameObject gameOvertext;
 
@@ -19,14 +20,19 @@ public class gameControllerScript : MonoBehaviour
     public GameObject imageTool4;
     private int selectedTool = 1;
 
-    void Start()
+    private void Awake()
     {
         timerText.text = timer.ToString();
         setTool(1);
-        if (instance == null)
-            instance = this;
-        else if(instance != this)
-            Destroy (gameObject);
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+
     }
 
     void Update()
@@ -101,7 +107,6 @@ public class gameControllerScript : MonoBehaviour
 
     public void GameOver()
     {
-    setTool(4);
         gameOvertext.SetActive(true);
         gameOver = true;
     }
