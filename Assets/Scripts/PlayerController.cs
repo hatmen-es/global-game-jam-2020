@@ -52,16 +52,12 @@ public class PlayerController : MonoBehaviour
     }
 
     void CheckFixableCollision(Collider2D collider) {
-        switch(collider.gameObject.tag) {
-            case "Fixable":
-                int element = mapGenerator.mapElementInWorldPos(transform.position);
-                if (element != 0) {
-                    GameController.Instance.IncrementTimer();
-                    mapGenerator.removeFixableAtPosition(transform.position);
-                }
-            break;
-
-            default: break;
+        if (collider.gameObject.tag == "Fixable"){ 
+            int element = mapGenerator.mapElementInWorldPos(transform.position);
+            if (element != 0) {
+                GameController.Instance.IncrementTimer();
+                mapGenerator.removeFixableAtPosition(transform.position);
+            }
         }
     }
 
