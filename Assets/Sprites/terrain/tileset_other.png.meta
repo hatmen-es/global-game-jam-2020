@@ -1,5 +1,8 @@
 fileFormatVersion: 2
 guid: 6d7848daad4444e61b7372931921a443
+labels:
+- Border
+- Ground
 TextureImporter:
   internalIDToNameTable:
   - first:
