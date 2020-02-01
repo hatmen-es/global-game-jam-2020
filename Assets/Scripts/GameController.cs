@@ -8,9 +8,7 @@ public class GameController : Singleton<GameController>
     public Text timerText;
     public GameObject gameOvertext;
 
-    public SwitchScene switchScene;
-
-    private float timer = 5.0f;
+    public float timer = 5.0f;
     private int visibleTimer;
     public bool gameOver = false;
     public float scrollSpeed = -1.5f;
@@ -49,7 +47,5 @@ public class GameController : Singleton<GameController>
     {
         gameOvertext.SetActive(true);
         gameOver = true;
-
-        switchScene.NextScene();
     }
 }
