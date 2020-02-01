@@ -43,15 +43,10 @@ public class PlayerController : MonoBehaviour
     {
         //Should ignore borders
         switch(collision.gameObject.tag) {
-            case "Border":
-                return;
-            break;
-
             case "Obstacle":
                 hitPlayer();
                 hitModifier("Slowdown");
             break;
-
             default: break;
         }
     }
@@ -62,7 +57,10 @@ public class PlayerController : MonoBehaviour
         switch(collider.gameObject.tag) {
             case "Fixable":
                 int element = mapGenerator.mapElementInWorldPos(transform.position);
-                mapGenerator.removeFixableAtPosition(transform.position);
+                if (element != 0) {
+                    GameController.Instance.IncrementTimer();
+                    mapGenerator.removeFixableAtPosition(transform.position);
+                }
             break;
 
             default: break;
