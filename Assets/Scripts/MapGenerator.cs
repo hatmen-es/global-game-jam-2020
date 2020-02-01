@@ -98,4 +98,10 @@ public class MapGenerator : MonoBehaviour
         Vector3Int matrixPos = tilemap.WorldToCell(pos);
         return map[matrixPos.x, matrixPos.y];
     }
+
+    public void removeFixableAtPosition(Vector3 pos) {
+        Vector3Int matrixPos = tilemap.WorldToCell(pos);
+        map[matrixPos.x, matrixPos.y] = 0;
+        RenderMap(map);
+    }
 }
