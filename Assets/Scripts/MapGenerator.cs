@@ -18,11 +18,12 @@ public class MapGenerator : MonoBehaviour
     public int height = 200;
     public int width = 14;
     public int spaceBetween = 3;
+    private int[,] map; 
     void Start() { 
-        int [,] map = Generate();
+        map = Generate(height, 30);
         RenderMap(map);
     }
-    public int[,] Generate()
+    public int[,] Generate(int height, int safeInterval)
     {
         int nElements = 3;
         int[,] map = new int[width, height];
@@ -34,7 +35,9 @@ public class MapGenerator : MonoBehaviour
                 fixablePos = Random.Range(1, width);
             }
             for (int x = 0; x < width; x++) {
-                if (x == 0 || x == rightIndex) {
+                if (y < safeInterval) {
+                    map[x, y] = 0;
+                } else if (x == 0 || x == rightIndex) {
                     map[x, y] = 0;
                 } else if (x == fixablePos) {
                     map[x, y] = Random.Range(1, nElements);
@@ -75,5 +78,19 @@ public class MapGenerator : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void generatNextMap(int threshold) {
+        int[,] next = Generate(height - threshold, 0);
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) {
+                if (y < threshold) {
+                    map[x,y] = map[x, y + threshold];
+                } else {
+                    map[x,y] = next[x, y - threshold];
+                }
+            }
+        }
+        RenderMap(map);
     }
 }
