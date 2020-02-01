@@ -8,9 +8,11 @@ public class GameController : MonoBehaviour
     public static GameController Instance;
 
     public Text timerText;
+    public Text distanceText;
     public GameObject gameOvertext;
 
     public float timer = 5.0f;
+    private float totalTimer = 0.0f;
     private int visibleTimer;
     public bool gameOver = false;
 
@@ -19,11 +21,12 @@ public class GameController : MonoBehaviour
     public GameObject imageTool3;
     public GameObject imageTool4;
     private int selectedTool = 1;
+    private int speed = 1;
 
     private void Awake()
     {
         timerText.text = timer.ToString();
-        setTool(1);
+        setTool(selectedTool);
         if (Instance == null)
         {
             Instance = this;
@@ -44,8 +47,11 @@ public class GameController : MonoBehaviour
         if (!gameOver)
         {
             timer -= Time.deltaTime;
+            totalTimer += Time.deltaTime;
             visibleTimer = (int)timer;
             timerText.text = visibleTimer.ToString();
+            // TODO: Replace this speed variable by CameraMovement.cs
+            distanceText.text = ((int)totalTimer * speed).ToString() + " m";
             if ( visibleTimer <= 0 )
             {
                 GameOver();
