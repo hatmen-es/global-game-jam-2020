@@ -14,10 +14,10 @@ public class MapGenerator : MonoBehaviour
     public Tile rightTile;
     public Tile borderLeftTile;
     public Tile borderRightTile;
-    public Tile goalTile;
     public int height = 200;
     public int width = 14;
     public int spaceBetween = 3;
+    public Tile[] fixableTiles;
     private int[,] map; 
     void Start() { 
         map = Generate(height, 30);
@@ -25,7 +25,7 @@ public class MapGenerator : MonoBehaviour
     }
     public int[,] Generate(int height, int safeInterval)
     {
-        int nElements = 17;
+        int nElements = fixableTiles.Length;
         int[,] map = new int[width, height];
         int rightIndex = width - 1;
 
@@ -63,6 +63,7 @@ public class MapGenerator : MonoBehaviour
             //Loop through the height of the map
             for (int y = 0; y < height; y++) 
             {
+                int elementNumber = map[x,y];
                 // 1 = tile, 0 = no tile
                 if (x == 0) 
                 {
@@ -71,8 +72,8 @@ public class MapGenerator : MonoBehaviour
                 } else if (x == rightIndex) {
                     tilemap.SetTile(new Vector3Int(x, y, 0), rightTile); 
                     borderTilemap.SetTile(new Vector3Int(x, y, 0), borderRightTile); 
-                } else if(map[x,y] != 0) {
-                    fixableTilemap.SetTile(new Vector3Int(x, y, 0), goalTile); 
+                } else if(elementNumber != 0) {
+                    fixableTilemap.SetTile(new Vector3Int(x, y, 0), fixableTiles[elementNumber]); 
                 } else {
                     tilemap.SetTile(new Vector3Int(x, y, 0), baseTile); 
                 }
