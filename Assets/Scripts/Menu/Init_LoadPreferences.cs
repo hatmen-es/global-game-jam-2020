@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class Init_LoadPreferences : MonoBehaviour
 {
     #region Variables
+    // NICKNAME
+    [SerializeField] private InputField nicknameInputField;
+    
     //BRIGHTNESS
     [Space(20)]
     [SerializeField] private Brightness brightnessEffect;
@@ -29,6 +32,16 @@ public class Init_LoadPreferences : MonoBehaviour
 
         if (canUse)
         {
+            //NICKNAME
+            if (nicknameInputField != null)
+            {
+                if (PlayerPrefs.HasKey("nickname"))
+                {
+                    string text = PlayerPrefs.GetString("nickname");
+                    nicknameInputField.text = text;
+                }
+            }
+
             //BRIGHTNESS
             if (brightnessEffect != null)
             {

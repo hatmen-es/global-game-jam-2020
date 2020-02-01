@@ -34,6 +34,10 @@ public class MenuController : MonoBehaviour
     [Space(10)]
     #endregion
 
+    #region Nickname
+    [SerializeField] private InputField nicknameInputField;
+    #endregion
+
     #region Slider Linking
     [Header("Menu Sliders")]
     [SerializeField] private Brightness brightnessEffect;
@@ -133,6 +137,20 @@ public class MenuController : MonoBehaviour
             menuNumber = 7;
         }
     }
+    #endregion
+
+    #region Nickname
+    public void NicknameInputField()
+    {
+        SaveNickNameApply();
+    }
+
+    public void SaveNickNameApply()
+    {
+        PlayerPrefs.SetString("nickname", nicknameInputField.text);
+        Debug.Log(PlayerPrefs.GetString("nickname"));
+    }
+
     #endregion
 
     #region Volume Sliders Click
