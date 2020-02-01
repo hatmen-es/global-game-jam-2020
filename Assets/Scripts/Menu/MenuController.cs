@@ -9,8 +9,8 @@ public class MenuController : MonoBehaviour
 {
     #region Default Values
     [Header("Go to main")]
-    public string scene;
-    public Color loadToColor = Color.white;
+    public string scene = "Main";
+    public Color loadToColor = Color.black;
     #endregion
 
     #region Default Values
@@ -31,8 +31,6 @@ public class MenuController : MonoBehaviour
     [SerializeField] private GameObject creditsCanvas;
     [SerializeField] private GameObject graphicsMenu;
     [SerializeField] private GameObject soundMenu;
-    [SerializeField] private GameObject gameplayMenu;
-    [SerializeField] private GameObject controlsMenu;
     [Space(10)]
     #endregion
 
@@ -240,7 +238,6 @@ public class MenuController : MonoBehaviour
         GeneralSettingsCanvas.SetActive(true);
         graphicsMenu.SetActive(false);
         soundMenu.SetActive(false);
-        gameplayMenu.SetActive(false);
 
         GameplayApply();
         BrightnessApply();
@@ -256,14 +253,11 @@ public class MenuController : MonoBehaviour
         creditsCanvas.SetActive(false);
         graphicsMenu.SetActive(false);
         soundMenu.SetActive(false);
-        gameplayMenu.SetActive(false);
         menuNumber = 1;
     }
 
     public void GoBackToGameplayMenu()
     {
-        controlsMenu.SetActive(false);
-        gameplayMenu.SetActive(true);
         menuNumber = 5;
     }
 
