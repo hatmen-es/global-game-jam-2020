@@ -57,11 +57,9 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collider)
     {
-                Debug.Log("bbb");
         //Should ignore borders
         switch(collider.gameObject.tag) {
             case "Fixable":
-                Debug.Log("aaa");
                 //if(!collision.gameObject.isFixed) GameControl.instance.fix(collision.gameObject);
             break;
 
