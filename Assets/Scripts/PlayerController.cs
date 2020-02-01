@@ -43,15 +43,10 @@ public class PlayerController : MonoBehaviour
     {
         //Should ignore borders
         switch(collision.gameObject.tag) {
-            case "Border":
-                return;
-            break;
-
             case "Obstacle":
                 hitPlayer();
                 hitModifier("Slowdown");
             break;
-
             default: break;
         }
     }
