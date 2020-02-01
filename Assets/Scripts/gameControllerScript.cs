@@ -9,7 +9,7 @@ public class gameControllerScript : MonoBehaviour
     public Text timerText;
     public GameObject gameOvertext;
 
-    private float timer = 5.0f;
+    public float timer = 5.0f;
     private int visibleTimer;
     public bool gameOver = false;
     public float scrollSpeed = -1.5f;
