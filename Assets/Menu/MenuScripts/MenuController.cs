@@ -23,6 +23,7 @@ public class MenuController : MonoBehaviour
     [Header("Main Menu Components")]
     [SerializeField] private GameObject menuDefaultCanvas;
     [SerializeField] private GameObject GeneralSettingsCanvas;
+    [SerializeField] private GameObject creditsCanvas;
     [SerializeField] private GameObject graphicsMenu;
     [SerializeField] private GameObject soundMenu;
     [SerializeField] private GameObject gameplayMenu;
@@ -117,7 +118,7 @@ public class MenuController : MonoBehaviour
         if(buttonType == "Credits")
 		{
             menuDefaultCanvas.SetActive(false);
-            GeneralSettingsCanvas.SetActive(true);
+            creditsCanvas.SetActive(true);
             menuNumber = 10;
         }
 
@@ -148,8 +149,8 @@ public class MenuController : MonoBehaviour
     #region Brightness Sliders Click
     public void BrightnessSlider(float brightness)
     {
-        //brightnessEffect.brightness = brightness;
-        //brightnessText.text = brightness.ToString("0.0");
+        brightnessEffect.brightness = brightness;
+        brightnessText.text = brightness.ToString("0.0");
     }
 
     public void BrightnessApply()
@@ -241,6 +242,7 @@ public class MenuController : MonoBehaviour
     {
         menuDefaultCanvas.SetActive(true);
         GeneralSettingsCanvas.SetActive(false);
+        creditsCanvas.SetActive(false);
         graphicsMenu.SetActive(false);
         soundMenu.SetActive(false);
         gameplayMenu.SetActive(false);
