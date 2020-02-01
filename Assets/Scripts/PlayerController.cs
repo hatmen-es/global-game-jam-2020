@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public int lives = 3; 
     public bool useLives = false;
     private Rigidbody2D playerRb; 
+    public MapGenerator mapGenerator;
 
     public float verticalVelocity = 10f;
     public float horizontalVelocity = 10f;
@@ -60,7 +61,8 @@ public class PlayerController : MonoBehaviour
         //Should ignore borders
         switch(collider.gameObject.tag) {
             case "Fixable":
-                //if(!collision.gameObject.isFixed) GameControl.instance.fix(collision.gameObject);
+                int element = mapGenerator.mapElementInWorldPos(transform.position);
+                Debug.Log(element);
             break;
 
             default: break;
