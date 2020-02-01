@@ -25,7 +25,7 @@ public class MapGenerator : MonoBehaviour
     }
     public int[,] Generate(int height, int safeInterval)
     {
-        int nElements = fixableTiles.Length;
+        int nElements = fixableTiles.Length + 1;
         int[,] map = new int[width, height];
         int rightIndex = width - 1;
 
