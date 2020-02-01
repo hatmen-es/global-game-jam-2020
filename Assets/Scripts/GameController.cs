@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
 
     public Text timerText;
     public Text distanceText;
-    public GameObject gameOvertext;
+    public GameObject uiGameOver;
 
     public float timer = 5.0f;
     private float totalTimer = 0.0f;
@@ -53,10 +53,6 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        if (gameOver && Input.GetKeyDown("space"))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
         if (!gameOver)
         {
             timer -= Time.deltaTime;
@@ -128,7 +124,7 @@ public class GameController : MonoBehaviour
     {
          audioSourceSong.Stop();
         audioSourceGameover.Play();
-        gameOvertext.SetActive(true);
+        uiGameOver.SetActive(true);
         gameOver = true;
     }
 }
