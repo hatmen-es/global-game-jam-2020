@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerController : MonoBehaviour
 {
     private bool isDead = false;  
     public int lives = 3; 
-    public bool useLives = true;
+    public bool useLives = false;
     private Rigidbody2D playerRb; 
 
     public float verticalVelocity = 10f;
     public float horizontalVelocity = 10f;
+
+    private string status = "normal";
 
     // Start is called before the first frame update
     void Start()
@@ -45,11 +48,19 @@ public class PlayerController : MonoBehaviour
 
             case "Obstacle":
                 hitPlayer();
+                hitModifier("Slowdown");
             break;
 
+            default: break;
+        }
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        //Should ignore borders
+        switch(collision.gameObject.tag) {
             case "Fixeable":
-            //TODO descomentar una vez tengamos el gamecontroller
-            //GameControl.instance.fix(collision.gameObject.tag);
+                //if(!collision.gameObject.isFixed) GameControl.instance.fix(collision.gameObject);
             break;
 
             default: break;
@@ -75,4 +86,25 @@ public class PlayerController : MonoBehaviour
             if(lives<=0) killPlayer();
         }
     }
+
+    void hitModifier(string type){
+        switch (type) {
+            case "Slowdown": 
+                if(status!="Slowdown"){
+                    verticalVelocity = verticalVelocity/3;
+                    horizontalVelocity = horizontalVelocity/3;
+                    Invoke("resetPlayerStatus", 4.0f);
+                    status = type;
+                }    
+            break;
+        }
+    }
+
+    void resetPlayerStatus(){
+        verticalVelocity = 10f;
+        horizontalVelocity = 10f;
+        status="normal";
+    }
+
+
 }
