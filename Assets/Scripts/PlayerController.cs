@@ -41,8 +41,6 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         //Should ignore borders
-        var tilebase = collision.gameObject.name;
-        Debug.Log(tilebase);
         switch(collision.gameObject.tag) {
             case "Border":
                 return;
@@ -57,11 +55,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnCollisionStay2D(Collision2D collision)
+    void OnTriggerStay2D(Collider2D collider)
     {
+                Debug.Log("bbb");
         //Should ignore borders
-        switch(collision.gameObject.tag) {
-            case "Fixeable":
+        switch(collider.gameObject.tag) {
+            case "Fixable":
+                Debug.Log("aaa");
                 //if(!collision.gameObject.isFixed) GameControl.instance.fix(collision.gameObject);
             break;
 
