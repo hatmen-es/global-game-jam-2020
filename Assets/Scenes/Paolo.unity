@@ -152,13 +152,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemap: {fileID: 1783641065}
   borderTilemap: {fileID: 1074145646}
+  fixableTilemap: {fileID: 1697988978}
   baseTile: {fileID: 11400000, guid: 5549ec7af6d6f4a1d82df1a7f77a763d, type: 2}
   leftTile: {fileID: 11400000, guid: 241a9de6dee5a460886e7fba79836d35, type: 2}
   rightTile: {fileID: 11400000, guid: 1a82f30f972984783a1be2e0b9e8f585, type: 2}
   borderLeftTile: {fileID: 11400000, guid: 82c7633ac1ef74104be454dbbe48dd3e, type: 2}
   borderRightTile: {fileID: 11400000, guid: fedb96cb3fc4b41b7a1ebad1dd8c9ddf, type: 2}
-  height: 200
+  goalTile: {fileID: 11400000, guid: aad28a684e7c641d2915f4c3d9045eb1, type: 2}
+  height: 400
   width: 14
+  spaceBetween: 3
 --- !u!4 &315220534
 Transform:
   m_ObjectHideFlags: 0
@@ -6514,6 +6517,7 @@ GameObject:
   - component: {fileID: 1386375797}
   - component: {fileID: 1386375796}
   - component: {fileID: 1386375795}
+  - component: {fileID: 1386375798}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6586,6 +6590,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1386375798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386375794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf6d699ac2337445a5d474f42e54c83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!213 &1600724040
 Sprite:
   m_ObjectHideFlags: 0
@@ -18876,6 +18893,52 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1950594528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1950594530}
+  - component: {fileID: 1950594529}
+  m_Layer: 0
+  m_Name: ScrollManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1950594529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950594528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425d0739da67c46998b31049332af3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 1386375796}
+  threshold: 200
+  grid: {fileID: 1320219332}
+--- !u!4 &1950594530
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950594528}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.1310046, y: 4.1253185, z: -77.49766}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2063023920
 MonoBehaviour:
   m_ObjectHideFlags: 0
