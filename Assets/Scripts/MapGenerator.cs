@@ -17,6 +17,7 @@ public class MapGenerator : MonoBehaviour
     public Tile goalTile;
     public int height = 200;
     public int width = 14;
+    public int spaceBetween = 3;
     void Start() { 
         int [,] map = Generate();
         RenderMap(map);
@@ -28,11 +29,14 @@ public class MapGenerator : MonoBehaviour
         int rightIndex = width - 1;
 
         for (int y = 0; y < height; y++) {
-            int fixablePos = Random.Range(1, width);
+            int fixablePos = 0;
+            if (y % spaceBetween == 0) {
+                fixablePos = Random.Range(1, width);
+            }
             for (int x = 0; x < width; x++) {
                 if (x == 0 || x == rightIndex) {
                     map[x, y] = 0;
-                } else if(x == fixablePos) {
+                } else if (x == fixablePos) {
                     map[x, y] = Random.Range(1, nElements);
                 } else {
                     map[x, y] = 0;
