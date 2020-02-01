@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 224782041864866166}
   - component: {fileID: 222066318305443232}
   - component: {fileID: 114114205791555310}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Gameplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 114135359697687648}
   - component: {fileID: 114307521768639578}
   - component: {fileID: 114699151668916750}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Controls_Back_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +335,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224698488812769426}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,7 +472,7 @@ GameObject:
   - component: {fileID: 224335667879463862}
   - component: {fileID: 222356879542733456}
   - component: {fileID: 114102626594902860}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,7 +549,7 @@ GameObject:
   - component: {fileID: 224957738986755284}
   - component: {fileID: 222717578288934954}
   - component: {fileID: 114279346116421802}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -622,7 +622,7 @@ GameObject:
   - component: {fileID: 224937102744613126}
   - component: {fileID: 222475831663605128}
   - component: {fileID: 114208139526314110}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BrightnessTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -698,7 +698,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224041558862431132}
   - component: {fileID: 114414691622253428}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BrightnessMainSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -799,7 +799,7 @@ GameObject:
   - component: {fileID: 224821120991010292}
   - component: {fileID: 222262049485221980}
   - component: {fileID: 114449456638266802}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -870,7 +870,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4374564820707788}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: VolumeSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -960,7 +960,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e0f37c9f5fbc56e40b5d5725a4b720c5, type: 3}
+    m_Font: {fileID: 12800000, guid: f64987868e1194a02bfe3438d48c86ed, type: 3}
     m_FontSize: 62
     m_FontStyle: 1
     m_BestFit: 0
@@ -1180,7 +1180,7 @@ GameObject:
   - component: {fileID: 224349645185619104}
   - component: {fileID: 222044812647628836}
   - component: {fileID: 114376474844283954}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GraphicsMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1258,7 +1258,7 @@ GameObject:
   - component: {fileID: 224173506866414068}
   - component: {fileID: 222613655477384804}
   - component: {fileID: 114533266295326214}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1333,7 +1333,7 @@ GameObject:
   - component: {fileID: 114269775502156836}
   - component: {fileID: 114463775431132340}
   - component: {fileID: 114716411277872414}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SoundMenu_Reset_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1503,7 +1503,7 @@ GameObject:
   - component: {fileID: 224584888559399556}
   - component: {fileID: 222520240449578362}
   - component: {fileID: 114491092277015390}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Controls_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1576,7 +1576,7 @@ GameObject:
   - component: {fileID: 224913107892810874}
   - component: {fileID: 222346006356130028}
   - component: {fileID: 114999164972649372}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1649,7 +1649,7 @@ GameObject:
   - component: {fileID: 224200698504164776}
   - component: {fileID: 222114643507546552}
   - component: {fileID: 114748022199235414}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1722,7 +1722,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224016678776404242}
   - component: {fileID: 114866046668010596}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SensitivitySlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1823,7 +1823,7 @@ GameObject:
   - component: {fileID: 224764846278680844}
   - component: {fileID: 222660366640345656}
   - component: {fileID: 114623984352361792}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2069,7 +2069,7 @@ GameObject:
   - component: {fileID: 224881710676732232}
   - component: {fileID: 222269184212974646}
   - component: {fileID: 114759344759289806}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BG_UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2146,7 +2146,7 @@ GameObject:
   - component: {fileID: 224520397195483764}
   - component: {fileID: 222139115514191390}
   - component: {fileID: 114464382696829858}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SoundTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2227,7 +2227,7 @@ GameObject:
   - component: {fileID: 114026329636207514}
   - component: {fileID: 114242344326379520}
   - component: {fileID: 114148657982370816}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SoundMenu_Apply_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2395,7 +2395,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224386932768346260}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2433,7 +2433,7 @@ GameObject:
   - component: {fileID: 4632753293960446}
   - component: {fileID: 82731731430920718}
   - component: {fileID: 114754865640368622}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: UIController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2567,6 +2567,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bcbdb54739de444ab8e0dc4b527da94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scene: Main
+  loadToColor: {r: 0, g: 0, b: 0, a: 1}
   defaultBrightness: 1
   defaultVolume: 0.5
   defaultSen: 4
@@ -2599,7 +2601,7 @@ GameObject:
   - component: {fileID: 224075836159156854}
   - component: {fileID: 222314439961288060}
   - component: {fileID: 114872377239150568}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GameplayMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2678,7 +2680,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224566843522611872}
   - component: {fileID: 114272391833239024}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: VolumeMainSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2777,7 +2779,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224372677457860128}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2813,7 +2815,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224688235574749908}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2849,7 +2851,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4470007364297888}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BrightnessSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2884,7 +2886,7 @@ GameObject:
   - component: {fileID: 224193114942591212}
   - component: {fileID: 222398624425823556}
   - component: {fileID: 114036040233595794}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ControllerSenText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2961,7 +2963,7 @@ GameObject:
   - component: {fileID: 224797769795726062}
   - component: {fileID: 222575125153460710}
   - component: {fileID: 114891153557613922}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3034,7 +3036,7 @@ GameObject:
   - component: {fileID: 224663521861128668}
   - component: {fileID: 222472067752018350}
   - component: {fileID: 114662438807354912}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: VolumeSliderText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3113,7 +3115,7 @@ GameObject:
   - component: {fileID: 114401047516898260}
   - component: {fileID: 114285005715370132}
   - component: {fileID: 114301138558088698}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GameplayMenu_Reset_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3338,7 +3340,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e0f37c9f5fbc56e40b5d5725a4b720c5, type: 3}
+    m_Font: {fileID: 12800000, guid: f64987868e1194a02bfe3438d48c86ed, type: 3}
     m_FontSize: 62
     m_FontStyle: 1
     m_BestFit: 0
@@ -3552,7 +3554,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224514818215114428}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3592,7 +3594,7 @@ GameObject:
   - component: {fileID: 114931187330383384}
   - component: {fileID: 114829579203401376}
   - component: {fileID: 114206154886739464}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GameplayMenu_Apply_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3762,7 +3764,7 @@ GameObject:
   - component: {fileID: 224957305450225972}
   - component: {fileID: 222326482807311904}
   - component: {fileID: 114407640689836466}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SoundMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3840,7 +3842,7 @@ GameObject:
   - component: {fileID: 224734230105032842}
   - component: {fileID: 222417964451719614}
   - component: {fileID: 114603921931148674}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3911,7 +3913,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4857140464387456}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ControlsMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3947,7 +3949,7 @@ GameObject:
   - component: {fileID: 114186703523827612}
   - component: {fileID: 114190828022327494}
   - component: {fileID: 114430075385208178}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ControlsMenu_UI_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4117,7 +4119,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4632419979119034}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ControllerSensitivitySlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4154,7 +4156,7 @@ GameObject:
   - component: {fileID: 114664129315136574}
   - component: {fileID: 114000792297464864}
   - component: {fileID: 114132162791493158}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SoundMneu_Back_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4499,7 +4501,7 @@ GameObject:
   - component: {fileID: 224557963603241186}
   - component: {fileID: 222044541031609438}
   - component: {fileID: 114197708906423328}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4572,7 +4574,7 @@ GameObject:
   - component: {fileID: 224230950501903300}
   - component: {fileID: 222190995619979360}
   - component: {fileID: 114954420297510558}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BrightnessSliderText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4704,7 +4706,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e0f37c9f5fbc56e40b5d5725a4b720c5, type: 3}
+    m_Font: {fileID: 12800000, guid: f64987868e1194a02bfe3438d48c86ed, type: 3}
     m_FontSize: 62
     m_FontStyle: 1
     m_BestFit: 0
@@ -4821,7 +4823,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224149571748391390}
   - component: {fileID: 114897183776236306}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: InvertY_Toggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4918,7 +4920,7 @@ GameObject:
   - component: {fileID: 224775674752602308}
   - component: {fileID: 222024192736928686}
   - component: {fileID: 114640157192690238}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: InvertY_Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4993,7 +4995,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224377371666699894}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5135,7 +5137,7 @@ GameObject:
   - component: {fileID: 224603158946315986}
   - component: {fileID: 222540826025250238}
   - component: {fileID: 114826242186275584}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GraphicsTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5214,7 +5216,7 @@ GameObject:
   - component: {fileID: 224178290414102430}
   - component: {fileID: 222127982112182444}
   - component: {fileID: 114777735614908760}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ControllerSensivity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5293,7 +5295,7 @@ GameObject:
   - component: {fileID: 114987528576725276}
   - component: {fileID: 114836900062907644}
   - component: {fileID: 114591742678986414}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GraphicsMenu_Reset_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5465,7 +5467,7 @@ GameObject:
   - component: {fileID: 114875645838344386}
   - component: {fileID: 114086273960398430}
   - component: {fileID: 114546881349392672}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GampeplayMenu_Back_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5637,7 +5639,7 @@ GameObject:
   - component: {fileID: 224215754529466504}
   - component: {fileID: 222388305488161486}
   - component: {fileID: 114066163629866342}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5710,7 +5712,7 @@ GameObject:
   - component: {fileID: 224039881596624934}
   - component: {fileID: 222183022378888788}
   - component: {fileID: 114996477623886250}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BG_UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5785,7 +5787,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4125025890143666}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Invert Y
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5821,7 +5823,7 @@ GameObject:
   - component: {fileID: 114127820702261776}
   - component: {fileID: 114643387716397510}
   - component: {fileID: 114688074061028312}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GraphicsMenu_Apply_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6164,7 +6166,7 @@ GameObject:
   - component: {fileID: 224122112887627724}
   - component: {fileID: 222046117899474132}
   - component: {fileID: 114861908762729074}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MusicTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6243,7 +6245,7 @@ GameObject:
   - component: {fileID: 114934346464246464}
   - component: {fileID: 114119319443364386}
   - component: {fileID: 114679081723381168}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GraphicsMenu_Back_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6514,7 +6516,7 @@ GameObject:
   - component: {fileID: 224302179844915822}
   - component: {fileID: 222389366596511400}
   - component: {fileID: 114806165658864672}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7144,7 +7146,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e0f37c9f5fbc56e40b5d5725a4b720c5, type: 3}
+    m_Font: {fileID: 12800000, guid: f64987868e1194a02bfe3438d48c86ed, type: 3}
     m_FontSize: 62
     m_FontStyle: 1
     m_BestFit: 0
@@ -7613,7 +7615,7 @@ GameObject:
   - component: {fileID: 5359831921666656077}
   - component: {fileID: 1471036357927709651}
   - component: {fileID: 5244103954389777785}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BG_UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}

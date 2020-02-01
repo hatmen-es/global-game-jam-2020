@@ -442,6 +442,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114263711298867918, guid: ed022c6eaaa372f498c83d69665e2adc,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: f64987868e1194a02bfe3438d48c86ed,
+        type: 3}
     - target: {fileID: 114754865640368622, guid: ed022c6eaaa372f498c83d69665e2adc,
         type: 3}
       propertyPath: brightnessEffect
@@ -472,6 +478,24 @@ PrefabInstance:
       propertyPath: loadToColor.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114803030738577818, guid: ed022c6eaaa372f498c83d69665e2adc,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: f64987868e1194a02bfe3438d48c86ed,
+        type: 3}
+    - target: {fileID: 114835905219775522, guid: ed022c6eaaa372f498c83d69665e2adc,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: f64987868e1194a02bfe3438d48c86ed,
+        type: 3}
+    - target: {fileID: 3836220461295159639, guid: ed022c6eaaa372f498c83d69665e2adc,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: f64987868e1194a02bfe3438d48c86ed,
+        type: 3}
     - target: {fileID: 7595851866180707982, guid: ed022c6eaaa372f498c83d69665e2adc,
         type: 3}
       propertyPath: m_Layer
