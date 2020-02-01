@@ -13,7 +13,7 @@ public class CameraMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (GameController.Instance.gameOver)
+        if (GameController.Instance && GameController.Instance.gameOver)
             return;
         float diff = speed * Time.deltaTime;
         transform.position += new Vector3(0, diff, 0);
