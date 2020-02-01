@@ -159,7 +159,7 @@ MonoBehaviour:
   borderLeftTile: {fileID: 11400000, guid: 82c7633ac1ef74104be454dbbe48dd3e, type: 2}
   borderRightTile: {fileID: 11400000, guid: fedb96cb3fc4b41b7a1ebad1dd8c9ddf, type: 2}
   goalTile: {fileID: 11400000, guid: aad28a684e7c641d2915f4c3d9045eb1, type: 2}
-  height: 400
+  height: 100
   width: 14
   spaceBetween: 3
 --- !u!4 &315220534
@@ -18923,8 +18923,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 1386375796}
-  threshold: 200
+  threshold: 50
   grid: {fileID: 1320219332}
+  mapGenerator: {fileID: 315220533}
 --- !u!4 &1950594530
 Transform:
   m_ObjectHideFlags: 0
