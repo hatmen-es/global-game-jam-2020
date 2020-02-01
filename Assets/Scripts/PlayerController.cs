@@ -51,9 +51,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnTriggerStay2D(Collider2D collider)
-    {
-        //Should ignore borders
+    void CheckFixableCollision(Collider2D collider) {
         switch(collider.gameObject.tag) {
             case "Fixable":
                 int element = mapGenerator.mapElementInWorldPos(transform.position);
@@ -65,6 +63,16 @@ public class PlayerController : MonoBehaviour
 
             default: break;
         }
+    }
+
+    void OnTriggerStay2D(Collider2D collider)
+    {
+        CheckFixableCollision(collider);
+    }
+
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        CheckFixableCollision(collider);
     }
 
     void killPlayer()
