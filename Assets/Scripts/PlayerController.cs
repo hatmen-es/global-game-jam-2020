@@ -27,8 +27,16 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //Don't allow control the player if isDead.
-        if (isDead == false)
-        {
+        if (isDead == false) {
+            if (Input.GetKeyDown(KeyCode.H)) {
+                GameController.Instance.setTool(1);
+            } else if (Input.GetKeyDown(KeyCode.J)) {
+                GameController.Instance.setTool(2);
+            } else if (Input.GetKeyDown(KeyCode.K)) {
+                GameController.Instance.setTool(3);
+            } else if (Input.GetKeyDown(KeyCode.L)) {
+                GameController.Instance.setTool(4);
+            }
             Vector2 playerInput;
             // Get player input
             playerInput.x = Input.GetAxis("Horizontal") * verticalVelocity;
