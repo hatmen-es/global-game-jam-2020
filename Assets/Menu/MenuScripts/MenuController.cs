@@ -27,12 +27,7 @@ public class MenuController : MonoBehaviour
     [SerializeField] private GameObject soundMenu;
     [SerializeField] private GameObject gameplayMenu;
     [SerializeField] private GameObject controlsMenu;
-    [SerializeField] private GameObject confirmationMenu;
     [Space(10)]
-    [Header("Menu Popout Dialogs")]
-    [SerializeField] private GameObject noSaveDialog;
-    [SerializeField] private GameObject newGameDialog;
-    [SerializeField] private GameObject loadGameDialog;
     #endregion
 
     #region Slider Linking
@@ -55,16 +50,6 @@ public class MenuController : MonoBehaviour
     private void Start()
     {
         menuNumber = 1;
-    }
-    #endregion
-
-    //MAIN SECTION
-    #region Confrimation Box
-    public IEnumerator ConfirmationBox()
-    {
-        confirmationMenu.SetActive(true);
-        yield return new WaitForSeconds(2);
-        confirmationMenu.SetActive(false);
     }
     #endregion
 
@@ -141,7 +126,6 @@ public class MenuController : MonoBehaviour
             menuDefaultCanvas.SetActive(false);
             SceneManager.LoadScene(sceneName);
 
-            // newGameDialog.SetActive(true);
             menuNumber = 7;
         }
     }
@@ -158,7 +142,6 @@ public class MenuController : MonoBehaviour
     {
         PlayerPrefs.SetFloat("masterVolume", AudioListener.volume);
         Debug.Log(PlayerPrefs.GetFloat("masterVolume"));
-        StartCoroutine(ConfirmationBox());
     }
     #endregion
 
@@ -173,7 +156,6 @@ public class MenuController : MonoBehaviour
     {
         PlayerPrefs.SetFloat("masterBrightness", brightnessEffect.brightness);
         Debug.Log(PlayerPrefs.GetFloat("masterBrightness"));
-        StartCoroutine(ConfirmationBox());
     }
     #endregion
 
@@ -205,8 +187,6 @@ public class MenuController : MonoBehaviour
         PlayerPrefs.SetFloat("masterSen", controlSenFloat);
         Debug.Log("Sensitivity" + " " + PlayerPrefs.GetFloat("masterSen"));
         #endregion
-
-        StartCoroutine(ConfirmationBox());
     }
 
     #region ResetButton
@@ -260,9 +240,6 @@ public class MenuController : MonoBehaviour
     public void GoBackToMainMenu()
     {
         menuDefaultCanvas.SetActive(true);
-        newGameDialog.SetActive(false);
-        loadGameDialog.SetActive(false);
-        noSaveDialog.SetActive(false);
         GeneralSettingsCanvas.SetActive(false);
         graphicsMenu.SetActive(false);
         soundMenu.SetActive(false);
@@ -282,9 +259,5 @@ public class MenuController : MonoBehaviour
         GoBackToMainMenu();
     }
 
-    public void ClickNoSaveDialog()
-    {
-        GoBackToMainMenu();
-    }
     #endregion
 }

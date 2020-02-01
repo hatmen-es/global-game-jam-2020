@@ -6,12 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/SpeedTutor_Full_Menu_System/Scenes/MainMenu.unity
+    path: Assets/Menu/Scenes/Menu.unity
     guid: e84c9862265a1104a9d724503d4111aa
   - enabled: 1
-    path: Assets/SpeedTutor_Full_Menu_System/Scenes/Level1_Demo.unity
-    guid: a29848c6cbdc245439fd7641ab34b8bc
-  - enabled: 1
-    path: Assets/Scenes/Paolo.unity
-    guid: 835599052a42193449a55a2430401932
+    path: Assets/Scenes/Main.unity
+    guid: 02bd119f0d6a3634889bd0c89d4a8d2e
   m_configObjects: {}
