@@ -23,6 +23,11 @@ public class GameController : MonoBehaviour
     private int selectedTool = 1;
     private int speed = 1;
 
+    public AudioClip AudioClipSong;
+    public AudioClip AudioClipGameover;
+    AudioSource audioSourceSong;
+    AudioSource audioSourceGameover;
+
     private void Awake()
     {
         timerText.text = timer.ToString();
@@ -35,6 +40,14 @@ public class GameController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        audioSourceSong = gameObject.AddComponent<AudioSource>();
+        audioSourceGameover = gameObject.AddComponent<AudioSource>();
+
+        audioSourceSong.clip = AudioClipSong;
+        audioSourceGameover.clip = AudioClipGameover;
+        
+        audioSourceSong.Play();
 
     }
 
@@ -113,6 +126,8 @@ public class GameController : MonoBehaviour
 
     public void GameOver()
     {
+         audioSourceSong.Stop();
+        audioSourceGameover.Play();
         gameOvertext.SetActive(true);
         gameOver = true;
     }
