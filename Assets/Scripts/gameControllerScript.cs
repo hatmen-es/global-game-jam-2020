@@ -12,12 +12,17 @@ public class gameControllerScript : MonoBehaviour
     public float timer = 5.0f;
     private int visibleTimer;
     public bool gameOver = false;
-    public float scrollSpeed = -1.5f;
 
+    public GameObject imageTool1;
+    public GameObject imageTool2;
+    public GameObject imageTool3;
+    public GameObject imageTool4;
+    private int selectedTool = 1;
 
     void Start()
     {
         timerText.text = timer.ToString();
+        setTool(1);
         if (instance == null)
             instance = this;
         else if(instance != this)
@@ -42,6 +47,52 @@ public class gameControllerScript : MonoBehaviour
         }
     }
 
+    private void resetToolScale(GameObject tool)
+    {
+        tool.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 0);
+    }
+
+    private void selectTool(GameObject tool, int selected)
+    {
+        resetAllToolsScale();
+        tool.GetComponent<RectTransform>().localScale += new Vector3(.5f, 0.5f, 0);
+        selectedTool = selected;
+    }
+
+    private void resetAllToolsScale()
+    {
+        resetToolScale(imageTool1);
+        resetToolScale(imageTool2);
+        resetToolScale(imageTool3);
+        resetToolScale(imageTool4);
+    }
+
+    public void setTool(int selected)
+    {
+        switch (selected)
+          {
+          case 1:
+              selectTool(imageTool1, 1);
+              break;
+          case 2:
+              selectTool(imageTool2, 2);
+              break;
+          case 3:
+              selectTool(imageTool3, 3);
+              break;
+          case 4:
+              selectTool(imageTool4, 4);
+              break;
+          default:
+              // Console.WriteLine("Error in selection");
+              break;
+      }
+    }
+
+    public int getSelectedTool()
+    {
+        return selectedTool;
+    }
 
     public void IncrementTimer(int increment = 3)
     {
@@ -50,6 +101,7 @@ public class gameControllerScript : MonoBehaviour
 
     public void GameOver()
     {
+    setTool(4);
         gameOvertext.SetActive(true);
         gameOver = true;
     }
