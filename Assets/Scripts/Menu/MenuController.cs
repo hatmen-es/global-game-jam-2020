@@ -151,6 +151,8 @@ public class MenuController : MonoBehaviour
         string text = nicknameInputField.text;
         PlayerPrefs.SetString(Init_LoadPreferences.nicknameKey, text);
         newGameButton.interactable = text != null && text.Length > 0;
+
+        Random.InitState(text.GetHashCode());
     }
 
     #endregion

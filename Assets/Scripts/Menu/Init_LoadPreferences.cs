@@ -45,6 +45,8 @@ public class Init_LoadPreferences : MonoBehaviour
                     string text = PlayerPrefs.GetString(nicknameKey);
                     nicknameInputField.text = text;
                     newGameButton.interactable = text != null && text.Length > 0;
+
+                    Random.InitState(text.GetHashCode());
                 }
                 else
                 {
