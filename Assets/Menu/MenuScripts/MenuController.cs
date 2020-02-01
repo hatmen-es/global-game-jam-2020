@@ -8,6 +8,12 @@ using UnityEngine.EventSystems;
 public class MenuController : MonoBehaviour
 {
     #region Default Values
+    [Header("Go to main")]
+    public string scene;
+    public Color loadToColor = Color.white;
+    #endregion
+
+    #region Default Values
     [Header("Default Menu Values")]
     [SerializeField] private float defaultBrightness;
     [SerializeField] private float defaultVolume;
@@ -15,7 +21,6 @@ public class MenuController : MonoBehaviour
     [SerializeField] private bool defaultInvertY;
 
     [Header("Levels To Load")]
-    private string sceneName = "Main";
     [SerializeField] private int menuNumber;
     #endregion
 
@@ -125,7 +130,7 @@ public class MenuController : MonoBehaviour
 		if(buttonType == "NewGame")
 		{
             menuDefaultCanvas.SetActive(false);
-            SceneManager.LoadScene(sceneName);
+            Initiate.Fade(scene, loadToColor, 1.0f);
 
             menuNumber = 7;
         }
