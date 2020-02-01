@@ -1891,6 +1891,7 @@ MonoBehaviour:
   creditsCanvas: {fileID: 7486712911551538717}
   graphicsMenu: {fileID: 1181362766895746}
   soundMenu: {fileID: 1579993891502314}
+  newGameButton: {fileID: 114021933306572124}
   nicknameInputField: {fileID: 1182734993481741462}
   brightnessEffect: {fileID: 0}
   brightnessSlider: {fileID: 114414691622253428}

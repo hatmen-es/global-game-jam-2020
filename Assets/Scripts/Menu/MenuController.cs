@@ -34,7 +34,8 @@ public class MenuController : MonoBehaviour
     [Space(10)]
     #endregion
 
-    #region Nickname
+    #region Default
+    [SerializeField] private Button newGameButton;
     [SerializeField] private InputField nicknameInputField;
     #endregion
 
@@ -147,8 +148,9 @@ public class MenuController : MonoBehaviour
 
     public void SaveNickNameApply()
     {
-        PlayerPrefs.SetString("nickname", nicknameInputField.text);
-        Debug.Log(PlayerPrefs.GetString("nickname"));
+        string text = nicknameInputField.text;
+        PlayerPrefs.SetString(Init_LoadPreferences.nicknameKey, text);
+        newGameButton.interactable = text != null && text.Length > 0;
     }
 
     #endregion
@@ -162,8 +164,7 @@ public class MenuController : MonoBehaviour
 
     public void VolumeApply()
     {
-        PlayerPrefs.SetFloat("masterVolume", AudioListener.volume);
-        Debug.Log(PlayerPrefs.GetFloat("masterVolume"));
+        PlayerPrefs.SetFloat(Init_LoadPreferences.volumenKey, AudioListener.volume);
     }
     #endregion
 
@@ -176,8 +177,7 @@ public class MenuController : MonoBehaviour
 
     public void BrightnessApply()
     {
-        PlayerPrefs.SetFloat("masterBrightness", brightnessEffect.brightness);
-        Debug.Log(PlayerPrefs.GetFloat("masterBrightness"));
+        PlayerPrefs.SetFloat(Init_LoadPreferences.brightnessKey, brightnessEffect.brightness);
     }
     #endregion
 

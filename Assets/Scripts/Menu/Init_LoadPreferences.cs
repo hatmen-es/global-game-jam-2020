@@ -5,9 +5,14 @@ using UnityEngine.UI;
 
 public class Init_LoadPreferences : MonoBehaviour
 {
+    public static string nicknameKey = "nickname";
+    public static string brightnessKey = "masterBrightness";
+    public static string volumenKey = "masterVolume";
+
     #region Variables
     // NICKNAME
     [SerializeField] private InputField nicknameInputField;
+    [SerializeField] private Button newGameButton;
     
     //BRIGHTNESS
     [Space(20)]
@@ -35,19 +40,24 @@ public class Init_LoadPreferences : MonoBehaviour
             //NICKNAME
             if (nicknameInputField != null)
             {
-                if (PlayerPrefs.HasKey("nickname"))
+                if (PlayerPrefs.HasKey(nicknameKey))
                 {
-                    string text = PlayerPrefs.GetString("nickname");
+                    string text = PlayerPrefs.GetString(nicknameKey);
                     nicknameInputField.text = text;
+                    newGameButton.interactable = text != null && text.Length > 0;
+                }
+                else
+                {
+                    newGameButton.interactable = false;
                 }
             }
 
             //BRIGHTNESS
             if (brightnessEffect != null)
             {
-                if (PlayerPrefs.HasKey("masterBrightness"))
+                if (PlayerPrefs.HasKey(brightnessKey))
                 {
-                    float localBrightness = PlayerPrefs.GetFloat("masterBrightness");
+                    float localBrightness = PlayerPrefs.GetFloat(brightnessKey);
 
                     brightnessText.text = localBrightness.ToString("0.0");
                     brightnessSlider.value = localBrightness;
@@ -61,9 +71,9 @@ public class Init_LoadPreferences : MonoBehaviour
             }
 
             //VOLUME
-            if (PlayerPrefs.HasKey("masterVolume"))
+            if (PlayerPrefs.HasKey(volumenKey))
             {
-                float localVolume = PlayerPrefs.GetFloat("masterVolume");
+                float localVolume = PlayerPrefs.GetFloat(volumenKey);
 
                 volumeText.text = localVolume.ToString("0.0");
                 volumeSlider.value = localVolume;
