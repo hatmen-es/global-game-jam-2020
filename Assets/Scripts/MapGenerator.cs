@@ -7,6 +7,8 @@ public class MapGenerator : MonoBehaviour
     public static int[,] Generate(int width, int height, int nElements)
     {
         int[,] map = new int[width, height];
+        if (gameControllerScript.instance.gameOver)
+            return map;
         for (int x = 0; x < height; x++) {
             bool isElementSet = false;
             for (int y = 0; y < width; y++) {
