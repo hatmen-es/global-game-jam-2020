@@ -52,10 +52,16 @@ public class MenuController : MonoBehaviour
     [SerializeField] private Toggle invertYToggle;
     #endregion
 
+    public AudioClip AudioClipMenu;
+    AudioSource audioSourceMenu;
+
     #region Initialisation - Button Selection & Menu Order
     private void Start()
     {
         menuNumber = 1;
+        audioSourceMenu = gameObject.AddComponent<AudioSource>();
+        audioSourceMenu.clip = AudioClipMenu;
+        audioSourceMenu.Play();
     }
     #endregion
 

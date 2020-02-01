@@ -53,6 +53,8 @@ MonoBehaviour:
   imageTool2: {fileID: 0}
   imageTool3: {fileID: 0}
   imageTool4: {fileID: 0}
+  AudioClipSong: {fileID: 8300000, guid: a6f7931dc308b44a985592554ea23b46, type: 3}
+  AudioClipGameover: {fileID: 8300000, guid: c96520bcaec914148b81072e3fc822c1, type: 3}
 --- !u!82 &8755553840823697653
 AudioSource:
   m_ObjectHideFlags: 0
