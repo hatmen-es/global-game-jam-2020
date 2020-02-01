@@ -23,10 +23,12 @@ public class MapGenerator : MonoBehaviour
     {
         int nElements = 3;
         int[,] map = new int[width, height];
+        int rightIndex = width - 1;
+
         for (int y = 0; y < height; y++) {
             bool isElementSet = false;
             for (int x = 0; x < width; x++) {
-                if (isElementSet) {
+                if (isElementSet || x == 0 || x == rightIndex) {
                     map[x, y] = 0;
                 }
                 else {
