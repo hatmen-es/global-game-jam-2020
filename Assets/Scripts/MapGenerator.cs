@@ -13,12 +13,15 @@ public class MapGenerator : MonoBehaviour
     public Tile rightTile;
     public Tile borderLeftTile;
     public Tile borderRightTile;
+    public int height = 200;
+    public int width = 14;
     void Start() { 
-        int [,] map = Generate(10, 200, 1);
+        int [,] map = Generate();
         RenderMap(map);
     }
-    public static int[,] Generate(int width, int height, int nElements)
+    public int[,] Generate()
     {
+        int nElements = 3;
         int[,] map = new int[width, height];
         for (int y = 0; y < height; y++) {
             bool isElementSet = false;
