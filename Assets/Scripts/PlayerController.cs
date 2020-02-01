@@ -54,7 +54,8 @@ public class PlayerController : MonoBehaviour
     void CheckFixableCollision(Collider2D collider) {
         if (collider.gameObject.tag == "Fixable"){ 
             int element = mapGenerator.mapElementInWorldPos(transform.position);
-            if (element != 0) {
+            int selected = GameController.Instance.getSelectedTool();
+            if (element == selected) {
                 GameController.Instance.IncrementTimer();
                 mapGenerator.removeFixableAtPosition(transform.position);
             }
