@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
     private float totalTimer = 0.0f;
     private int visibleTimer;
     public bool gameOver = false;
+<<<<<<< HEAD
 
     public GameObject imageTool1;
     public GameObject imageTool2;
@@ -38,6 +39,28 @@ public class GameController : MonoBehaviour
 
     }
 
+=======
+    public float scrollSpeed = -1.5f;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+
+    }
+
+    void Start()
+    {
+        timerText.text = timer.ToString();
+    }
+
+>>>>>>> 92d8234... Created game controller prefab and music added
     void Update()
     {
         if (gameOver && Input.GetKeyDown("space"))
