@@ -73,7 +73,6 @@ public class MapGenerator : MonoBehaviour
                     tilemap.SetTile(new Vector3Int(x, y, 0), rightTile); 
                     borderTilemap.SetTile(new Vector3Int(x, y, 0), borderRightTile); 
                 } else if(elementNumber != 0) {
-                    Debug.Log(elementNumber);
                     fixableTilemap.SetTile(new Vector3Int(x, y, 0), fixableTiles[elementNumber - 1]); 
                 } else {
                     tilemap.SetTile(new Vector3Int(x, y, 0), baseTile); 
