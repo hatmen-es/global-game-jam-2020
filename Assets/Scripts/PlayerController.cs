@@ -27,8 +27,16 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //Don't allow control the player if isDead.
-        if (isDead == false)
-        {
+        if (isDead == false) {
+            if (Input.GetKeyDown(KeyCode.H)) {
+                GameController.Instance.setTool(1);
+            } else if (Input.GetKeyDown(KeyCode.J)) {
+                GameController.Instance.setTool(2);
+            } else if (Input.GetKeyDown(KeyCode.K)) {
+                GameController.Instance.setTool(3);
+            } else if (Input.GetKeyDown(KeyCode.L)) {
+                GameController.Instance.setTool(4);
+            }
             Vector2 playerInput;
             // Get player input
             playerInput.x = Input.GetAxis("Horizontal") * verticalVelocity;
@@ -51,20 +59,25 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void CheckFixableCollision(Collider2D collider) {
+        if (collider.gameObject.tag == "Fixable"){ 
+            int element = mapGenerator.mapElementInWorldPos(transform.position);
+            int selected = GameController.Instance.getSelectedTool();
+            if (element == selected) {
+                GameController.Instance.IncrementTimer();
+                mapGenerator.removeFixableAtPosition(transform.position);
+            }
+        }
+    }
+
     void OnTriggerStay2D(Collider2D collider)
     {
-        //Should ignore borders
-        switch(collider.gameObject.tag) {
-            case "Fixable":
-                int element = mapGenerator.mapElementInWorldPos(transform.position);
-                if (element != 0) {
-                    GameController.Instance.IncrementTimer();
-                    mapGenerator.removeFixableAtPosition(transform.position);
-                }
-            break;
+        CheckFixableCollision(collider);
+    }
 
-            default: break;
-        }
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        CheckFixableCollision(collider);
     }
 
     void killPlayer()
