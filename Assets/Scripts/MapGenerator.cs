@@ -7,9 +7,12 @@ using UnityEngine.Tilemaps;
 public class MapGenerator : MonoBehaviour
 {
     public Tilemap tilemap;
+    public Tilemap borderTilemap;
     public Tile baseTile;
     public Tile leftTile;
     public Tile rightTile;
+    public Tile borderLeftTile;
+    public Tile borderRightTile;
     void Start() { 
         int [,] map = Generate(10, 200, 1);
         RenderMap(map);
@@ -37,6 +40,7 @@ public class MapGenerator : MonoBehaviour
     {
         //Clear the map (ensures we dont overlap)
         tilemap.ClearAllTiles(); 
+        borderTilemap.ClearAllTiles(); 
         //Loop through the width of the map
         int width = map.GetUpperBound(0);
         int height = map.GetUpperBound(1);
@@ -50,8 +54,10 @@ public class MapGenerator : MonoBehaviour
                 if (x == 0) 
                 {
                     tilemap.SetTile(new Vector3Int(x, y, 0), leftTile); 
+                    borderTilemap.SetTile(new Vector3Int(x, y, 0), borderLeftTile); 
                 } else if (x == rightIndex) {
                     tilemap.SetTile(new Vector3Int(x, y, 0), rightTile); 
+                    borderTilemap.SetTile(new Vector3Int(x, y, 0), borderRightTile); 
                 } else {
                     tilemap.SetTile(new Vector3Int(x, y, 0), baseTile); 
                 }
