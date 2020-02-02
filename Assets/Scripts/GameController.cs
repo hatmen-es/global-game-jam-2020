@@ -7,6 +7,8 @@ public class GameController : MonoBehaviour
 {
     public static GameController Instance;
 
+    public float scrollSpeed = -5;
+
     public Text timerText;
     public Text distanceText;
     public GameObject uiGameOver;
