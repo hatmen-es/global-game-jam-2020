@@ -44,7 +44,7 @@ public class MapGenerator : MonoBehaviour
                     map[x, y] = 0;
                 } else if (x == 0 || x == rightIndex) {
                     map[x, y] = 0;
-                } else if (hole != 0 && x != hole) {
+                } else if (hole != 0 && x != hole && x != (hole +1)) {
                     map[x, y] = -1;
                 } else if (x == fixablePos) {
                     map[x, y] = Random.Range(1, nElements);
