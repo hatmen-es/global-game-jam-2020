@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
     public GameObject imageTool2;
     public GameObject imageTool3;
     public GameObject imageTool4;
+    public GameObject birdRef;
     private int selectedTool = 1;
     private int speed = 1;
 
@@ -48,6 +49,7 @@ public class GameController : MonoBehaviour
         audioSourceGameover.clip = AudioClipGameover;
         
         audioSourceSong.Play();
+        InvokeRepeating ("CreateBird", 3f, 8.0f);
 
     }
 
@@ -127,4 +129,12 @@ public class GameController : MonoBehaviour
         uiGameOver.SetActive(true);
         gameOver = true;
     }
+
+    private void CreateBird(){
+        Vector3 cameraPosition = Camera.main.ScreenToViewportPoint (new Vector3 (0, Camera.main.pixelHeight, 0));
+        cameraPosition.y = 1.0f;
+        float randomY = Random.Range (0.5f, 3.5f);
+		Vector3 pos = new Vector3 (-4.0f, randomY, 0.0f);
+		Instantiate (birdRef, pos, Quaternion.identity);
+	}
 }
