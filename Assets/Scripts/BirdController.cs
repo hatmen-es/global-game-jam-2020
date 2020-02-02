@@ -7,10 +7,12 @@ public class BirdController : MonoBehaviour
     // Start is called before the first frame update
     public float speed = 1;
     public float timer = 0.0f;
-
+    public AudioClip AudioClipBird;
+    AudioSource audioSourceBird;
     void Start()
     {
-        
+        audioSourceBird = gameObject.AddComponent<AudioSource>();
+        audioSourceBird.clip = AudioClipBird;
     }
 
     // Update is called once per frame
@@ -25,4 +27,12 @@ public class BirdController : MonoBehaviour
         float diff = speed * Time.deltaTime;
         transform.position += new Vector3(diff, 0, 0);
     }
+
+     void OnTriggerEnter2D (Collider2D other)
+     {
+         if (other.gameObject.tag == "Player") 
+         {
+             audioSourceBird.Play();
+         }
+     }
 }
