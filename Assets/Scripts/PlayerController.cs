@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private string status = "normal";
     public AudioClip AudioClipFixable;
     AudioSource audioSourceFixable;
+    private int gameoverCollisionFrame = 0;
     // Start is called before the first frame update
     void Start()
     {

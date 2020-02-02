@@ -9,6 +9,7 @@ public class MapGenerator : MonoBehaviour
     public Tilemap tilemap;
     public Tilemap borderTilemap;
     public Tilemap fixableTilemap;
+    public Tilemap obstacleTilemap;
     public Tile baseTile;
     public Tile leftTile;
     public Tile rightTile;
@@ -77,7 +78,7 @@ public class MapGenerator : MonoBehaviour
                 } else if (elementNumber > 0) {
                     fixableTilemap.SetTile(new Vector3Int(x, y, 0), fixableTiles[elementNumber - 1]); 
                 } else if (elementNumber == -1) {
-                    borderTilemap.SetTile(new Vector3Int(x, y, 0), obstacle); 
+                    obstacleTilemap.SetTile(new Vector3Int(x, y, 0), obstacle); 
                 }
                 tilemap.SetTile(new Vector3Int(x, y, 0), baseTile);
             }
