@@ -122,7 +122,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7996916059305897290}
         m_MethodName: MouseClick
         m_Mode: 5
         m_Arguments:
@@ -343,7 +343,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7996916059305897290}
         m_MethodName: MouseClick
         m_Mode: 5
         m_Arguments:
@@ -377,6 +377,7 @@ GameObject:
   - component: {fileID: 6287693163017143996}
   - component: {fileID: 4099624542434624390}
   - component: {fileID: 3580656642915599186}
+  - component: {fileID: 7996916059305897290}
   m_Layer: 5
   m_Name: UIGameOver
   m_TagString: Untagged
@@ -466,3 +467,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7996916059305897290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3788803737459815160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95deb6c1488364f6b800f7a9e4ae3d2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuScene: Menu
+  gameScene: Main
+  loadToColor: {r: 0, g: 0, b: 0, a: 1}
