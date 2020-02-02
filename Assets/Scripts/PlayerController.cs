@@ -17,7 +17,8 @@ public class PlayerController : MonoBehaviour
     private string status = "normal";
     public AudioClip AudioClipFixable;
     AudioSource audioSourceFixable;
-    private int gameoverCollisionFrame = 0;
+    private int obstacleCollisionFrame = 0;
+    private int dangerCollisionFrame = -1;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,13 +54,32 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        //Should ignore borders
+        detectGameoverCollision(collision);
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        detectGameoverCollision(collision);
+    }
+
+    void detectGameoverCollision(Collision2D collision) {
+        int current = Time.frameCount;
         switch(collision.gameObject.tag) {
             case "Obstacle":
-                hitPlayer();
-                //hitModifier("Slowdown");
+                obstacleCollisionFrame = current;
+            break;
+            case "Danger":
+                dangerCollisionFrame = current;
             break;
             default: break;
+        }
+        detectGameoverCollision();
+    }
+
+
+    void detectGameoverCollision() {
+        if (dangerCollisionFrame == obstacleCollisionFrame) {
+            GameController.Instance.GameOver();
         }
     }
 
