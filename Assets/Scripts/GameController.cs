@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour
     public GameObject imageTool3;
     public GameObject imageTool4;
     public GameObject birdRef;
+    public float toolHighlightScale = 1.25f;
     private int selectedTool = 1;
     private int speed = 1;
 
@@ -72,13 +73,13 @@ public class GameController : MonoBehaviour
 
     private void resetToolScale(GameObject tool)
     {
-        tool.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 0);
+        tool.GetComponent<RectTransform>().localScale = new Vector2(1, 1);
     }
 
     private void selectTool(GameObject tool, int selected)
     {
         resetAllToolsScale();
-        tool.GetComponent<RectTransform>().localScale += new Vector3(.5f, 0.5f, 0);
+        tool.GetComponent<RectTransform>().localScale = new Vector2(toolHighlightScale, toolHighlightScale);
         selectedTool = selected;
     }
 
@@ -124,7 +125,7 @@ public class GameController : MonoBehaviour
 
     public void GameOver()
     {
-         audioSourceSong.Stop();
+        audioSourceSong.Stop();
         audioSourceGameover.Play();
         uiGameOver.SetActive(true);
         gameOver = true;
