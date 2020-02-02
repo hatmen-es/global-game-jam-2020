@@ -11220,11 +11220,12 @@ MonoBehaviour:
   baseTile: {fileID: 11400000, guid: 5549ec7af6d6f4a1d82df1a7f77a763d, type: 2}
   leftTile: {fileID: 11400000, guid: 241a9de6dee5a460886e7fba79836d35, type: 2}
   rightTile: {fileID: 11400000, guid: 1a82f30f972984783a1be2e0b9e8f585, type: 2}
+  obstacle: {fileID: 11400000, guid: 772bf38b1aee84e3da741735943cd065, type: 2}
   borderLeftTile: {fileID: 11400000, guid: 82c7633ac1ef74104be454dbbe48dd3e, type: 2}
   borderRightTile: {fileID: 11400000, guid: fedb96cb3fc4b41b7a1ebad1dd8c9ddf, type: 2}
-  height: 100
+  height: 222
   width: 14
-  spaceBetween: 3
+  spaceBetween: 5
   fixableTiles:
   - {fileID: 11400000, guid: aad28a684e7c641d2915f4c3d9045eb1, type: 2}
   - {fileID: 11400000, guid: e40c32623402f4ef8aa095e9bd187e83, type: 2}
@@ -19132,7 +19133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 848732709}
-  threshold: 50
+  threshold: 111
   grid: {fileID: 1701596687}
   mapGenerator: {fileID: 966396406}
 --- !u!4 &1250853955
