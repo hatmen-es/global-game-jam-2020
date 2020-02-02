@@ -43,7 +43,7 @@ public class GameController : MonoBehaviour
 
         audioSourceSong = gameObject.AddComponent<AudioSource>();
         audioSourceGameover = gameObject.AddComponent<AudioSource>();
-
+        audioSourceSong.loop = true;
         audioSourceSong.clip = AudioClipSong;
         audioSourceGameover.clip = AudioClipGameover;
         
