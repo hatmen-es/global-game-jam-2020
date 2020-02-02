@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
 
 
     void detectGameoverCollision() {
-        if (dangerCollisionFrame == obstacleCollisionFrame) {
+        if (!GameController.Instance.gameOver && dangerCollisionFrame == obstacleCollisionFrame) {
             GameController.Instance.GameOver();
         }
     }
