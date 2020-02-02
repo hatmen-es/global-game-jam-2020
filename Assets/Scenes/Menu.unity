@@ -202,16 +202,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114021933306572124, guid: ed022c6eaaa372f498c83d69665e2adc,
-        type: 3}
-      propertyPath: m_Interactable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114754865640368622, guid: ed022c6eaaa372f498c83d69665e2adc,
-        type: 3}
-      propertyPath: newGameButton
-      value: 
-      objectReference: {fileID: 1897846957}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed022c6eaaa372f498c83d69665e2adc, type: 3}
 --- !u!114 &384942025 stripped
@@ -345,6 +335,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1263531450419518, guid: cc18238686906234bb678b403db8d8fd, type: 3}
+      propertyPath: m_Name
+      value: Load_Preferences
+      objectReference: {fileID: 0}
     - target: {fileID: 4084184335491190, guid: cc18238686906234bb678b403db8d8fd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -377,6 +371,28 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4084184335491190, guid: cc18238686906234bb678b403db8d8fd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084184335491190, guid: cc18238686906234bb678b403db8d8fd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084184335491190, guid: cc18238686906234bb678b403db8d8fd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114325646035853880, guid: cc18238686906234bb678b403db8d8fd,
+        type: 3}
+      propertyPath: nicknameInputField
+      value: 
+      objectReference: {fileID: 255208914}
+    - target: {fileID: 114325646035853880, guid: cc18238686906234bb678b403db8d8fd,
+        type: 3}
+      propertyPath: newGameButton
+      value: 
+      objectReference: {fileID: 1897846957}
     - target: {fileID: 114325646035853880, guid: cc18238686906234bb678b403db8d8fd,
         type: 3}
       propertyPath: brightnessEffect
@@ -404,39 +420,9 @@ PrefabInstance:
       objectReference: {fileID: 165323091}
     - target: {fileID: 114325646035853880, guid: cc18238686906234bb678b403db8d8fd,
         type: 3}
-      propertyPath: controllerText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114325646035853880, guid: cc18238686906234bb678b403db8d8fd,
-        type: 3}
-      propertyPath: controllerSlider
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114325646035853880, guid: cc18238686906234bb678b403db8d8fd,
-        type: 3}
-      propertyPath: invertYToggle
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114325646035853880, guid: cc18238686906234bb678b403db8d8fd,
-        type: 3}
       propertyPath: menuController
       value: 
       objectReference: {fileID: 384942025}
-    - target: {fileID: 114325646035853880, guid: cc18238686906234bb678b403db8d8fd,
-        type: 3}
-      propertyPath: nicknameInputField
-      value: 
-      objectReference: {fileID: 255208914}
-    - target: {fileID: 114325646035853880, guid: cc18238686906234bb678b403db8d8fd,
-        type: 3}
-      propertyPath: playButton
-      value: 
-      objectReference: {fileID: 1897846957}
-    - target: {fileID: 114325646035853880, guid: cc18238686906234bb678b403db8d8fd,
-        type: 3}
-      propertyPath: newGameButton
-      value: 
-      objectReference: {fileID: 1897846957}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc18238686906234bb678b403db8d8fd, type: 3}
 --- !u!114 &1248829814 stripped
