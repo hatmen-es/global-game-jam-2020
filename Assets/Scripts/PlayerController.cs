@@ -15,12 +15,15 @@ public class PlayerController : MonoBehaviour
     public float horizontalVelocity = 10f;
 
     private string status = "normal";
-
+    public AudioClip AudioClipFixable;
+    AudioSource audioSourceFixable;
     // Start is called before the first frame update
     void Start()
     {
         //Get and store a reference to the Rigidbody2D attached to this GameObject.
         playerRb = GetComponent<Rigidbody2D>();
+        audioSourceFixable = gameObject.AddComponent<AudioSource>();
+        audioSourceFixable.clip = AudioClipFixable;
     }
 
     // Update is called once per frame
@@ -64,6 +67,7 @@ public class PlayerController : MonoBehaviour
             int element = mapGenerator.mapElementInWorldPos(transform.position);
             int selected = GameController.Instance.getSelectedTool();
             if (element == selected) {
+                audioSourceFixable.Play();
                 GameController.Instance.IncrementTimer();
                 mapGenerator.removeFixableAtPosition(transform.position);
             }

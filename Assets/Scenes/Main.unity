@@ -8393,7 +8393,7 @@ GameObject:
   - component: {fileID: 464388951}
   - component: {fileID: 464388956}
   m_Layer: 0
-  m_Name: TruckObject
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8514,6 +8514,7 @@ MonoBehaviour:
   mapGenerator: {fileID: 966396406}
   verticalVelocity: 10
   horizontalVelocity: 10
+  AudioClipFixable: {fileID: 8300000, guid: 9176c7e5ef0284a768a187e58855adb9, type: 3}
 --- !u!4 &464388955
 Transform:
   m_ObjectHideFlags: 0
