@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
         switch(collision.gameObject.tag) {
             case "Obstacle":
                 hitPlayer();
-                hitModifier("Slowdown");
+                //hitModifier("Slowdown");
             break;
             default: break;
         }

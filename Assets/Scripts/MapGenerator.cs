@@ -12,6 +12,7 @@ public class MapGenerator : MonoBehaviour
     public Tile baseTile;
     public Tile leftTile;
     public Tile rightTile;
+    public Tile obstacle;
     public Tile borderLeftTile;
     public Tile borderRightTile;
     public int height = 200;
@@ -31,7 +32,10 @@ public class MapGenerator : MonoBehaviour
 
         for (int y = 0; y < height; y++) {
             int fixablePos = 0;
-            if (y % spaceBetween == 0) {
+            int hole = 0;
+            if (y % (spaceBetween * 15) == 0) {
+                hole = Random.Range(1, rightIndex - 1);
+            } else if (y % spaceBetween == 0) {
                 fixablePos = Random.Range(1, width);
             }
             for (int x = 0; x < width; x++) {
@@ -39,6 +43,8 @@ public class MapGenerator : MonoBehaviour
                     map[x, y] = 0;
                 } else if (x == 0 || x == rightIndex) {
                     map[x, y] = 0;
+                } else if (hole != 0 && x != hole) {
+                    map[x, y] = -1;
                 } else if (x == fixablePos) {
                     map[x, y] = Random.Range(1, nElements);
                 } else {
@@ -58,22 +64,20 @@ public class MapGenerator : MonoBehaviour
         int width = map.GetUpperBound(0);
         int height = map.GetUpperBound(1);
         int rightIndex = width - 1;
-        for (int x = 0; x < width ; x++) 
-        {
+        for (int x = 0; x < width ; x++) {
             //Loop through the height of the map
-            for (int y = 0; y < height; y++) 
-            {
+            for (int y = 0; y < height; y++) {
                 int elementNumber = map[x,y];
-                // 1 = tile, 0 = no tile
-                if (x == 0) 
-                {
+                if (x == 0) {
                     tilemap.SetTile(new Vector3Int(x, y, 0), leftTile); 
                     borderTilemap.SetTile(new Vector3Int(x, y, 0), borderLeftTile); 
                 } else if (x == rightIndex) {
                     tilemap.SetTile(new Vector3Int(x, y, 0), rightTile); 
                     borderTilemap.SetTile(new Vector3Int(x, y, 0), borderRightTile); 
-                } else if(elementNumber != 0) {
+                } else if (elementNumber > 0) {
                     fixableTilemap.SetTile(new Vector3Int(x, y, 0), fixableTiles[elementNumber - 1]); 
+                } else if (elementNumber == -1) {
+                    borderTilemap.SetTile(new Vector3Int(x, y, 0), obstacle); 
                 }
                 tilemap.SetTile(new Vector3Int(x, y, 0), baseTile);
             }
