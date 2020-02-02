@@ -50,18 +50,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        //Should ignore borders
-        switch(collision.gameObject.tag) {
-            case "Obstacle":
-                hitPlayer();
-                hitModifier("Slowdown");
-            break;
-            default: break;
-        }
-    }
-
     void CheckFixableCollision(Collider2D collider) {
         if (collider.gameObject.tag == "Fixable"){ 
             int element = mapGenerator.mapElementInWorldPos(transform.position);
@@ -82,6 +70,13 @@ public class PlayerController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
         CheckFixableCollision(collider);
+        switch(collider.gameObject.tag) {
+            case "Obstacle":
+                hitPlayer();
+                hitModifier("Slowdown");
+            break;
+            default: break;
+        }
     }
 
     void killPlayer()
@@ -108,8 +103,8 @@ public class PlayerController : MonoBehaviour
         switch (type) {
             case "Slowdown": 
                 if(status!="Slowdown"){
-                    verticalVelocity = verticalVelocity/3;
-                    horizontalVelocity = horizontalVelocity/3;
+                    verticalVelocity = 1.5f;
+                    horizontalVelocity = 1.5f;
                     Invoke("resetPlayerStatus", 4.0f);
                     status = type;
                 }    
